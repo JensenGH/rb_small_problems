@@ -23,11 +23,11 @@ Implicit requirements:
 Each string is printed on a new line
 
 Questions:
-What happens when we pass an empty string or a 0 for our integer?
+What happens when we pass an empty string or a 0 to our arguments?
 
 Data Structure:
 Input: String, Integer
-Output: Integer
+Output: String
 
 Algorithm:
 Write a method called 'repeat'
