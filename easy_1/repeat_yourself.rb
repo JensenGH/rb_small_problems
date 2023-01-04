@@ -1,49 +1,43 @@
 =begin
 
 Problem:
-Write a method that takes two arguments, a string and a positive integer, and prints the string
+- Write a method that takes two arguments, a string and a positive integer, and prints the string
 as many times as the integer indicates.
+- Our two inputs are a string and integer
+- Our output is the input string printed each time on a new line, however many times our integer
+argument indicates.
 
-Understand the problem:
-Method takes two input arguments (string, integer)
-If the string is 'hello' and integer is 3, print 'hello' 3 times.
-Each string will be printed on a new line
+Examples/ test cases:
+repeat('Hello', 3)
 
-Input:
-String, Integer
-
-Ouput:
-String
-
-Explicit requirements:
-Method takes two arguments, a string and integer
-Print the string as many times as the integer indicates
+Explicit arguments:
+- The input integer must be positive
 
 Implicit requirements:
-Each string is printed on a new line
+- Since our example output shows each string printed on a new line, this should indicate that
+we should use 'puts' to output our string within our method. This means our method returns nil,
+but will output the given string.
 
-Questions:
-What happens when we pass an empty string or a 0 to our arguments?
+Data structure:
+- The method takes two arguments, one string and one positive integer
+- The output is the input string printed each time on a new line, however many times our integer
+argument indicates.
 
-Data Structure:
-Input: String, Integer
-Output: String
-
-Algorithm:
-Write a method called 'repeat'
-The method takes two input arguments (String, Integer)
-If the string is 'hello' and integer is 3, print 'hello' 3 times
-Print each string on a new line
-END
+Algo:
+- Create a method named 'repeat'
+- This method will take two input arguments, a string and a positive integer
+- We can use the Integer #times method to output our string. This method will iterate the given
+block as many times as the input integer amounts to. (from zero to 'integer' - 1)
+- Finally, we can output our string using 'puts' on the last line.
 
 =end
 
-def repeat(string, integer)
-  integer.times do
-    puts string
+# Code
+
+def repeat(str, num)
+  num.times do
+    puts str
   end
 end
 
-repeat('hello', 3)
-repeat('world', 4)
-repeat('tomorrow', 0)
+repeat('Hello', 3)

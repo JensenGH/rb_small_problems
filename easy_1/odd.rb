@@ -1,45 +1,47 @@
 =begin
 
 Problem:
-Write a method that takes one integer argument, which may be positive, negative, or zero. This
+- Write a method that takes one integer argument, which may be positive, negative, or zero. This
 method returns true if the number's absolute value is odd. You may assume that the argument is
-a valid integer value.
+a valid integer value. 
 
-Understand the problem:
-Write a method that takes one argument
-Input argument is an integer; may be positive, negative, or zero
-We may assume that the argument is always a valid integer
-Output is a boolean value.
-Print true if number's absolute value is odd, otherwise false
+- Keep in mind you are not allowed to use the methods #odd? or #even? in our solution. 
+
+Examples/ test cases:
+puts is_odd?(2)    # => false
+puts is_odd?(5)    # => true
+puts is_odd?(-17)  # => true
+puts is_odd?(-8)   # => false
+puts is_odd?(0)    # => false
+puts is_odd?(7)    # => true
 
 Explicit requirements:
-Integer can be positive, negative, or zero
-Assume that the argument is always a valid integer
-Print true if the argument's absolute value is odd
-We're not allowed to use #odd? or #even? methods
+- The integer input argument can be positive, negative, or zero.
+- Must determine if the number's absolute value is odd.
+- This method returns a boolean value (true or false).
+- Assume the integer value is valid.
+- Not allowed to use the methods #odd? or #even? in our solution.
 
 Implicit requirements:
-If the argument's absolute value isn't odd, print false
+- Return true if the number's absolute value is odd, false otherwise.
 
-Questions:
-None
+Data structure:
+- The input argument is an integer with a value that is positive, negative, or zero.
+- This method returns a boolean value. (true or false)
 
-Data Structure:
-Input: Integer
-Output: Boolean value
-
-Algorithm:
-Create a method called 'is_odd?' that accepts one input argument
-Input argument is a valid integer
-Check to see if the input arguemnt's absolute value is odd
-If it is then print true, otherwise print false
+Algo:
+- Create a method named 'puts_is_odd?'
+- This method takes one argument, an integer (positive, negative, or zero)
+- We can perform modulo operation:
+  - If our input number % 2 is not equal to 0, we know our input's absolute value is odd, false
+  otherwise.
 
 =end
 
-# Code with further exploration
+# Code
 
-def is_odd?(integer)
-  integer % 5.remainder(3) == 1 # if integer % 2 == 1, prints true
+def is_odd?(num)
+  num % 2 != 0
 end
 
 puts is_odd?(2)
@@ -48,3 +50,9 @@ puts is_odd?(-17)
 puts is_odd?(-8)
 puts is_odd?(0)
 puts is_odd?(7)
+
+# Further exploration
+
+def is_odd?(num)
+  num % 5.remainder(3) == 1 # 5.remainder(3) evalutes to 2
+end
