@@ -1,38 +1,39 @@
 =begin
 
 Problem:
-Write a program that prompts the user for two positive integers, and then prints the results of the
+- Write a program that prompts the user for two positive integers, and then prints the results of the
 following operations on those two numbers: addition, subtraction, product, quotient, remainder, and
 power. Do not worry about validating the input.
 
-Input: Two positive integers
-Ouput: The result of the following operations on those two numbers: (addition, subtraction, product, 
-quotient, remainder, and power)
+Example output:
+==> Enter the first number:
+23
+==> Enter the second number:
+17
+==> 23 + 17 = 40
+==> 23 - 17 = 6
+==> 23 * 17 = 391
+==> 23 / 17 = 1
+==> 23 % 17 = 6
+==> 23 ** 17 = 141050039560662968926103
 
 Explicit requirements:
-User must only input two positive integers
-Return the results for the addition, subtraction, product, quotient, remainder, and
-power operations.
+- The user must enter two positive integers
+- The operations to be performed are addition, subtraction, multiplication, division, modulo, and
+power.
 
 Implicit requirements:
-
-Questions:
+- None
 
 Data structure:
-Input: Two positive integers
-Output: The result of following the addition, subtraction, product, quotient, remainder, and
-power operations on our two input numbers.
+- Use #puts to prompt the user for two integers/ output message to user
+- Use #gets.to_i to retrieve the input from the user/ convert input from string to integer
 
-Algorithm:
-Ask the user for two input arguments
-Input arguments are two positive integers
-Create a variable called 'addition' and store the result of that operation into the variable
-Create a variable called 'subtraction' and store the result of that operation into the variable
-Create a variable called 'product' and store the result of that operation into the variable
-Create a variable called 'quotient' and store the result of that operation into the variable
-Create a variable called 'remainder' and store the result of that operation into the variable
-Create a variable called 'power' and store the result of that operation into the variable
-Print the results of all operations.
+Algo:
+- Prompt the user for two positive integers integers
+- Output the results of the following operations: addition, subtraction, division, multiplication,
+modulo, power. 
+
 =end
 
 # Code (Decided to create variables for each operation)
@@ -47,13 +48,11 @@ num2 = gets.to_i
 addition = num1 + num2
 subtraction = num1 - num2
 product = num1 * num2
-quotient = num1 / num2 # if second integer is 0, returns ZeroDivisionError
-                        # when converted to floats/ second integer is 0, returns Infinity
+quotient = num1 / num2
 remainder = num1 % num2
 power = num1 **  num2
 
 # Outputting our result
-
 puts "#{num1} + #{num2} = #{addition}"
 puts "#{num1} - #{num2} = #{subtraction}"
 puts "#{num1} * #{num2} = #{product}"
@@ -62,21 +61,7 @@ puts "#{num1} % #{num2} = #{remainder}"
 puts "#{num1} ** #{num2} = #{power}"
 
 # Further exploration
-# Write a solution to deal with the second number being 0.
-
-# Algorithm:
-# Create a variable called 'num1' equal to nil. This is to access our variable inside our loop
-# Create a loop and ask the user for the first number
-# Store the first number in the variable called 'num1'
-# Break from the first loop
-
-# Create a second loop
-# Initialize a 'num2' variable outside the second loop equal to 'nil'
-# Ask the user for a second number and store inside the 'num2' variable
-# Break from the loop if the number is NOT 0
-# Output an error message if the second number is 0
-# Prompt user for another number if the second number is 0
-# Output the results of performing our operations on the two input numbers
+# Write a solution to deal with the second number being 0. 
 
 num1 = nil
 loop do
