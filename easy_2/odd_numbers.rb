@@ -1,37 +1,30 @@
 =begin
 
 Problem:
-Print all odd numbers from 1 to 99, inclusive, to the console, with each number on a seperate line
+- Print all odd numbers from 1 to 99, inclusive, to the console, with each number on a seperate line
 
-Understand the problem:
-Print all odd numbers from 1 to 99, inclusive, to the console
-Each odd number should be printed on a seperate line
-Skip all even numbers from 1 to 99, inclusive, to the console
-Input: Integer
-Output: Integer
+Example output:
+1
+3
+5
+7
+..
 
 Explicit requirements:
-Print all odd numbers from 1 to 99, inclusive
-All numbers are printed on seprate lines
+- Print all odd numbers from 1 to 99 inclusive, on a seperate line.
 
 Implicit requirements:
-If the integer is even, don't print the integer to the screen
-
-Questions:
-None
+- None
 
 Data structure:
-Input: Integer
-Output: Integer
+- Using the Integer #upto method. This method iterates the given block and passes in integer values
+from "starting_num" up to and including "limit_num".
 
-Algorithm:
-From a range of 1 to 99, print all odd integers
-Skip all even integers within the range of 1 to 99
-Output each odd integer using puts
+Algo:
+- Using the Integer #upto method, integer 1 is our starting number and 99 is our max limit.
+- Passing in a block, we can 'puts num' if the number is odd.
 
 =end
-
-# Code (original solution)
 
 1.upto(99) { |num| puts num if num.odd?}
 

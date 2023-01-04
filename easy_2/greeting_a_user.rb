@@ -1,35 +1,30 @@
 =begin
 
 Problem:
-Write a program that will ask for the user's name. The program will then greet the user. If the
+- Write a program that will ask for the user's name. The program will then greet the user. If the
 user writes "name!" then the computer yells back to the user.
 
-Understand the problem:
-Ask the user for their name
-Greet the user
-IF the user types their name in like "name!"
-Output a message that yells back to the user
-Input: String
-Output: String
+Example output:
+What is your name? Bob
+Hello Bob.
+
+What is your name? Bob!
+HELLO BOB. WHY ARE WE SCREAMING?
 
 Explicit requirements:
-If the user writes their name like "name!", then the computer must yell back to the user
+- If the user uses an exclamation mark at the end of their name, yell back to the user in all caps.
 
 Implicit requirements:
-If the user does not write their name like "name!", simply greet the user without yelling
-
-Questions:
-None
+- None
 
 Data structure:
-Input: String
-Output: String
+- The input is a string
 
-Algorithm:
-Ask the user for their name
-Store their name into a variable called 'name' using #gets and #chomp
-IF the user types their name w/o an exclamation mark, then greet the user
-IF the user uses writes their name with an exclamation mark, then yell back to the user
+Algo:
+- Ask the user for their name
+- Create a variable called 'name' and store the input inside.
+- If the name ends with an '!' then yell back to the user in all caps, otherwise greet the user
+without using all caps.
 
 =end
 
@@ -44,17 +39,12 @@ else
   puts ">> Hello, #{name}."
 end
 
-# Code with further exploration (using #chomp and #chop)
-
-def chop(name)
-  if name[-1] == '!' then name.chop!
-  end
-end
+# Code with further exploration (using String #chop)
 
 puts ">> Hello, what's your name?"
 name = gets.chomp
 
-if chop(name)
+if name[-1] == '!' then name.chop!
   puts ">> HELLO #{name.upcase}. WHY ARE WE SCREAMING?"
 else
   puts ">> Hello, #{name}."

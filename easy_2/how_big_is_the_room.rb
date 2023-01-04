@@ -1,12 +1,12 @@
 =begin
 
 Problem:
-Build a program that asks a user for the length and width of a room in meters and then displays
+- Build a program that asks a user for the length and width of a room in meters and then displays
 the area of the room in both square meters and square feet.
 
-Note: 1 square meter == 10.7639 square feet
+- Note: 1 square meter == 10.7639 square feet
 
-Do not worry about validating the input at this time.
+- Do not worry about validating the input at this time.
 
 Example Run:
 Enter the length of the room in meters:
@@ -15,37 +15,26 @@ Enter the width of the room in meters:
 7
 The area of the room is 70.0 square meters (753.47 square feet).
 
-Understand the problem:
-Ask the user for the length and width of a room in meters
-Then, display the area of the room in both square meters and square feet.
-1 square meter == 10.7639 square feet
-Don't worry about validating input
-Input:String
-Output: String converted to Float
-
 Explicit requirements:
-Display the area of the room in both square meters and square feet
-1 square meter == 10.7639 square feet
-Don't worry about validating input
+- 1 square meter is equal to 10.7639 square feet.
 
 Implicit requirements:
-None
-
-Questions:
-None
+- Don't worry about validating inputs.
 
 Data structure:
-Input: String
-Output: A sentence of substrings with integers indicating the square meters and feet of the area
+- Input is a float representing either the length, width, square meters, etc.. 
+- Output is a sentence that describes the length of the room in meters, the width of the room in
+meters, the area of the room in square meters/ square feet.
 
-Algorithm:
-Ask the user for the length of room in meters
-Create a variable called 'length' to store user input, convert string to float
-Ask the user for the width of the room in meters
-Create a variable called 'width' to store user input, conver string to float
-SET a variable called 'area' equal to length * width, then round to nearest tenths
-SET variable called 'sq_meters_to_sq_feet equal to area * 10.7639
-Print result
+Algo:
+- Create a constant to represent how many square feet are in one square meter.
+- Ask the user for the length of the room in meters and store result in a variable called 'length'.
+  - Convert input to a float.
+- Ask the user for the width of the room in meters and store result in a variable called 'width'.
+  - Convert input to a float.
+- Create a variable called 'area' equal to (length * width) and round the number.
+- Create a variable called 'sq_feet' equal to (area * SQ_METERS_TO_SQ_FEET).
+- Output the result to the user.
 
 =end
 

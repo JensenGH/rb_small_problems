@@ -1,42 +1,33 @@
 =begin
 
 Problem:
-Build a program that displays when the user will retire and how many years she has to work
+- Build a program that displays when the user will retire and how many years she has to work
 until retirement.
 
-Understand the problem:
-Prompt user for for their age
-Ask the user what age they would like to retire
-Display the current year and the year they would retire at
-Display how many years are left until retirement
-Use the Time class from the ruby core library
-Input: String
-Output: String
+Example output:
+What is your age? 30
+At what age would you like to retire? 70
+
+It's 2016. You will retire in 2056.
+You have only 40 years of work to go!
 
 Explicit requirements:
-Display when the user will retire and how many years she has to work till retirement
-Use the Time class from the Ruby core library
+- Display when the user will retire and how many years are left of work until retirement.
 
 Implicit requirements:
-None
-
-Questions:
-None
+- None
 
 Data structure:
-Input: String
-Output: String
+- The input for 'age' and 'retirement_age' are both integers.
 
-Algorithm:
-Ask user for their age
-Convert age from string to integer
-Store their age in a variable called 'age'
-Ask the user what age they would like to retire
-Convert retirement age from string to an integer
-Store into a variable called 'retirement_age'
-Display the current year and year the user would retire
-Display how many years are left to go until retirement
-Use the Time class from the ruby core library.
+Algo:
+- Ask the user for their age. Store their age into a variable called 'age'. Conver input to integer
+- Ask what age the user would like to retire at. Store age into a variable called 'retirement_age'
+and convert input to an integer.
+- Create a variable called 'current_year' and called Time.now.year to display the current year
+- Create a variable called 'years_left. (retirement_age - age)
+- Create a variable called retirement_year (current_year + years_left)
+- Output the results
 
 =end
 

@@ -1,51 +1,56 @@
 =begin
 
 Problem:
-Write a program that asks the user to enter an integer greater than 0, then asks if the user
+- Write a program that asks the user to enter an integer greater than 0, then asks if the user
 wants to determine the sum or product of all numbers between 1 and the entered integer.
 
-Understand the problem:
-Ask the user to enter a number greater then 0
-If the user enters 's', then compute the sum between 1 and the entered integer
-If the user enters 'p', then compute the product between 1 and the entered integer
-Display result
-Input: String, Integer
-Output: String
+Example output:
+>> Please enter an integer greater than 0:
+5
+>> Enter 's' to compute the sum, 'p' to compute the product.
+s
+The sum of the integers between 1 and 5 is 15.
+
+
+>> Please enter an integer greater than 0:
+6
+>> Enter 's' to compute the sum, 'p' to compute the product.
+p
+The product of the integers between 1 and 6 is 720.
 
 Explicit requirements:
-The user has to enter a number greater then 0
-If the user types 's', compute the sum between 1 and the entered integer
-If the user types 'p', compute the product between 1 and the entered integer
+- The user must enter an integer greater than 0
+- Display the sum or product of all numbers between 1 and the entered integer.
 
 Implicit requirements:
-None
-
-Questions:
-None
+- None
 
 Data structure:
-Input: String, Integer
-Output: String
-Loop # 1: Checks for a valid integer that is greater then 0
-Loop # 2: Checks for a valid character input by the user
-If statement: Used for conditional execution based on our criteria
+- Created two methods, one to compute the sum of the input and one to compute the product of the input
+- Using loops to retrieve user input and break if the user enters invalid responses
 
-Algorithm:
-Create a method that will compute the sum of a given integer
-Create a method that will compute the product of a given integer
-# Loop 1:
-Ask the user for an integer greater then 0
-Store user input in a variable called 'integer' and convert from string to integer
-Break if the integer is greater then 0, otherwise output error message
-# Loop 2:
-Ask the user to enter 's' or 'p' to compute the sum or product
-Store the answer in a result called 'sum_or_product'
-Break if the string includes 's' or 'p', otherwise output an error message
-If sum_or_product == 's', compute the sum and output result
-If sum_or_product == 'p', compute the product and output result
-Else, output an error message.
-Ask user if they want to compute another integer
-Break if the user doesn't enter 'y' to continue.
+Algo:
+Method 1:
+- Create a method called 'compute_sum'
+- This method takes an integer greater than 0 as input
+- Sum the integers from 1 up to the input number
+Method 2:
+- Create a method called 'compute_product'
+- This method takes an integer greater than 0 as input
+- Compute the integers from 1 up to the input number
+Loop 1:
+- Set the integer variable = '' so we can access it from within our loop
+- Ask the user for an integer greater than 0
+- Break if the integer is greater than 0
+- Otherwise, output an error message to the user/ ask for another integer
+Loop 2:
+- Repeat the same steps as the first loop, except break from this loop if user enters 's' to compute
+sum or 'p' to compute product.
+- Otherwise output an error message and prompt the user for an operation to perform
+- If the user enters 's', compute the sum and output the message to the user.
+- If the user enters 'p'. compute the product and output the message to the user.
+- Ask the user if they want to perform another operation (y to continue), break from the program 
+if not.
 
 =end
 
