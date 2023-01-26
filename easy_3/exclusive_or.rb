@@ -35,12 +35,12 @@ Algo:
 # Code
 
 def xor?(num1, num2)
-  if num1 == true || num2 == true
-    true
-  elsif num1 == true && num2 == true
-    false
+  if num1 == false && num2 == true
+    return true
+  elsif num1 == true && num2 == false
+    return true
   else
-    true
+    return false
   end
 end
 
