@@ -56,3 +56,28 @@ puts stringy(6) == '101010'
 puts stringy(9) == '101010101'
 puts stringy(4) == '1010'
 puts stringy(7) == '1010101'
+
+# Further exploration: Modify stringy so it takes an additional optional argument
+# that defaults to 1. If the method is called with this argument set to 0, the method
+# should return a String of alternating 0's and 1's, but starting with 0 instead of 1.
+
+
+# If default is equal to 0, reassign the index to start at 1 instead of 0.
+
+def stringy(num, default = 1)
+  reversed_str = String.new
+  num.times do |index|
+    index += 1 if default == 0
+    if index.even?
+      reversed_str << '1'
+    else
+      reversed_str << '0'
+    end
+  end
+  reversed_str
+end
+
+puts stringy(6, 0) == '010101'
+puts stringy(9, 0) == '010101010'
+puts stringy(4, 0) == '0101'
+puts stringy(7, 0) == '0101010'
