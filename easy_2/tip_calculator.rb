@@ -16,12 +16,12 @@ Data strucure:
 - The output is the result of computing our tip and bill amount.
 
 Algo:
-- Ask the user for a bill amount
-- Create a variable called 'bill' and store the bill amount value inside, convert input to a float.
-- Ask the user for a tip percentage
-- Create a variable called 'percentage' and store the percentage inside, convert input to a float.
+- Ask the user for a bill amount, and store the input into a variable called bill.
+- Convert the bill into a float.
+- Ask the user for a tip percentage, and store the tip into a variable called percentage.
+- Convert the percentage into a float.
 - Create a variable called tip
-  - To retreive the tip amount, divide the tip percentage by 100, and multiply by the bill amount
+  - To retreive the tip amount, divide the tip percentage by 100, than multiply by the bill amount.
 - Create a variable called 'total'
   - The total is the bill plus the tip added together.
 - Output the results of the tip and the total.
@@ -38,5 +38,5 @@ percentage = gets.chomp.to_f
 tip = bill * (percentage / 100)
 total = bill + tip
 
-puts ">> The tip is #{sprintf("$%0.2f",tip)}"
-puts ">> The total is #{sprintf("$%0.2f",total)}"
+puts "The tip is $#{format("%.2f", "#{tip}")}" # Kernel#format is an alias to sprintf
+puts "The total is $#{format("%.2f", "#{total}")}"
