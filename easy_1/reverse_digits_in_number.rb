@@ -39,7 +39,7 @@ of the array to a string and call 'to_i' to convert our string back to an intege
 # Code
 
 def reversed_number(num)
-  num.to_s.chars.reverse.join.to_i
+  num.digits.join.to_i
 end
 
 p reversed_number(12345) == 54321
