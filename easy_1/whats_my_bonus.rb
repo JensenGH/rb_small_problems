@@ -39,7 +39,7 @@ Algo:
 # Code
 
 def calculate_bonus(salary, boolean)
-  boolean == true ? salary / 2 : 0
+  boolean ? (salary / 2) : 0
 end
 
 puts calculate_bonus(2800, true) == 1400
