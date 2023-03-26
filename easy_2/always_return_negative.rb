@@ -33,9 +33,13 @@ Algo:
 # Code
 
 def negative(num)
-  num > 0 ? num * -1 : num
+  num > 0 ? (num * -1) : num
 end
 
 p negative(5) == -5
 p negative(-3) == -3
 p negative(0) == 0
+
+# Further exploration:
+# I prefer using a ternary operator over the Integer#abs method due to the fact that it's more
+# explicit for this solution.
