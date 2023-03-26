@@ -60,27 +60,29 @@ puts "#{num1} / #{num2} = #{quotient}"
 puts "#{num1} % #{num2} = #{remainder}"
 puts "#{num1} ** #{num2} = #{power}"
 
-# Further exploration
-# Write a solution to deal with the second number being 0. 
+# Discussion: Here's a solution that prevents the second integer to be 0.
+# If we used floats instead of integers, some solutions may vary from the original solution.
+# For example, a divison operation doesn't return exact divison if the divisor doesn't evenly
+# divide into the dividend. With floats, the operation will return exact divison.
 
-num1 = nil
+first_num = nil
 loop do
   puts ">> Enter the first number:"
-  num1 = gets.to_i
+  first_num = gets.to_i
   break
 end
 
-num2 = nil
+second_num = nil
 loop do
   puts ">> Enter the second number:"
-  num2 = gets.to_i
+  second_num = gets.to_i
   break if num2 != 0
   puts ">> Our second integer cannot be 0! Try again."
 end
 
-puts "#{num1} + #{num2} = #{num1 + num2}"
-puts "#{num1} - #{num2} = #{num1 - num2}"
-puts "#{num1} * #{num2} = #{num1 * num2}"
-puts "#{num1} / #{num2} = #{num1.to_f / num2.to_f}"
-puts "#{num1} % #{num2} = #{num1 % num2}"
-puts "#{num1} ** #{num2} = #{num1 ** num2}"
+puts "#{first_num} + #{second_num} = #{first_num + second_num}"
+puts "#{first_num} - #{second_num} = #{first_num - second_num}"
+puts "#{first_num} * #{second_num} = #{first_num * second_num}"
+puts "#{first_num} / #{second_num} = #{first_num.to_f / second_num.to_f}"
+puts "#{first_num} % #{second_num} = #{first_num % second_num}"
+puts "#{first_num} ** #{second_num} = #{num1 ** second_num}"
