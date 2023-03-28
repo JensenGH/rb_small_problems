@@ -27,8 +27,8 @@ Algo:
 
 # Code
 
-def multiply(num1, num2)
-  num1 * num2
+def multiply(first_num, second_num)
+  first_num * second_num
 end
 
 p multiply(5, 3) == 15
@@ -36,18 +36,16 @@ p multiply(10, 5) == 50
 p multiply(-8, -8) == 64
 
 
-# Further exploration:
-# When our first argument is an array an we are multiplying it by an integer, a new array is returned.
-# The method will repeat the elements as many times as the integer indicates. 
-# The repeated elements in the new array reference the same objects as the original.
+# Further exploration: What happens when you multiply an Array by an integer?
 
-x = ['hi', 'bye']
-y = x * 2
+a = ['Hello', 'World']
+b = a * 2
 
-p x # => ["hi", "bye"]
-p y # => ["hi", "bye", "hi", "bye"]
+p a.object_id # 60
+p a[0].object_id, a[1].object_id # 80, 100
+p b.object_id # 120
+p b[0].object_id, b[1].object_id, b[2].object_id, b[3].object_id # 80, 100, 80, 100
 
-y[3].upcase!
-
-p x # => ["hi", "BYE"]
-p y # => ["hi, "BYE", "hi", "BYE"]
+# When you multiply an Array by an integer, the operation returns a new array with the original
+# elements repeated integer times. The repeated elements point to the same object as the original
+# array.
