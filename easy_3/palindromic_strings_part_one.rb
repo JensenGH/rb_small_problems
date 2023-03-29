@@ -31,16 +31,16 @@ Algo:
 
 # Code
 
-# Idiomatic soltuion (works with strings and arrays)
+# Works with strings and arrays..
 
-def palindrome?(collection)
-  collection == collection.reverse
+def palindrome?(str)
+  str == str.reverse
 end
 
-p palindrome?('madam') == true
-p palindrome?('Madam') == false          # (case matters)
-p palindrome?("madam i'm adam") == false # (all characters matter)
-p palindrome?('356653') == true
+#p palindrome?('madam') == true
+#p palindrome?('Madam') == false          # (case matters)
+#p palindrome?("madam i'm adam") == false # (all characters matter)
+#p palindrome?('356653') == true
 
 # Futher exploration
 # Write a method that determines whether an array or a string is palindromic; that is, write a 
@@ -48,19 +48,10 @@ p palindrome?('356653') == true
 # is a palindrome. You may not use an if, unless, or case statement or modifier.
 
 def palindromic?(collection)
-  reversed_collection = collection.class.new
-  reverse_counter = collection.size - 1
-
-  loop do
-    break if reverse_counter == -1
-    reversed_collection << collection[reverse_counter]
-    reverse_counter -= 1
-  end
-
-  reversed_collection == collection.reverse
+  true ? (collection == collection.reverse) : false
 end
 
-p palindromic?("Madam") #== false
-p palindromic?("12321") #== true
-p palindromic?([true, false, 'hello', false, true]) #== true
-p palindromic?([true, nil, false, false, true]) #== false
+p palindromic?("Madam") == false
+p palindromic?("12321") == true
+p palindromic?([true, false, 'hello', false, true]) == true
+p palindromic?([true, nil, false, false, true]) == false
