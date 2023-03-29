@@ -27,19 +27,25 @@ uppercase or not.
 Algo:
 - Create a method named 'uppercase?'
 - This method takes one string as an argument
-- Reassign string to to itself, but delete any character that isn't alphabetic.
-- Using a ternary operator:
-  - If the string contains all uppercase characters then print true, false otherwise.
+- Create a variable alpha_str equal to an empty string
+- If any characters within our input string are uppercase, append them to alpha_str
+- Compare if input string is equal to alpha_str, returns true if all characters are uppercase,
+  otherwise false.
 
 =end
 
 # Code
-# Since we want to ignore any character that isn't alphabetic, I decided to remove numbers and
-# punctuation from the input string.
 
-def uppercase?(string)
-  string = string.delete('0-9!#$%&')
-  string.upcase ? true : false
+def uppercase?(input_str)
+  alpha_str = ''
+  input_str.chars.select do |char|
+    if char == char.upcase
+      alpha_str << char
+    else
+      char
+    end
+  end
+  input_str == alpha_str
 end
 
 p uppercase?('t') == false
@@ -48,3 +54,15 @@ p uppercase?('Four Score') == false
 p uppercase?('FOUR SCORE') == true
 p uppercase?('4SCORE!') == true
 p uppercase?('') == true
+
+
+# Further exploration:
+# In Ruby, everything is considered truthy except for false and nil. With this knowledge, I would
+# say that even if a String object is empty, the String itself is still considered truthy. You can
+# test this in IRB:
+# empty_str = "" => ""
+# !!empty_str => true
+# !empty_str => false
+# Calling !!(object) will turn an object into it's boolean value. As you can see this returns true
+# since the empty string is considered truthy.
+# Calling !(object) will turn an object into it's boolean negate. (the opposite of it's boolean value)
