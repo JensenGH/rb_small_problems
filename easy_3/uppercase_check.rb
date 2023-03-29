@@ -41,8 +41,6 @@ def uppercase?(input_str)
   input_str.chars.select do |char|
     if char == char.upcase
       alpha_str << char
-    else
-      char
     end
   end
   input_str == alpha_str
