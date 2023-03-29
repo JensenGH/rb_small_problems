@@ -35,9 +35,13 @@ Algo:
 
 # Code
 
-def real_palindrome?(string)
-  string = string.downcase.delete('^a-z0-9') # deletes anything that isn't a letter or digit.
-  string == string.reverse
+def palindrome?(str)
+  str == str.reverse
+end
+
+def real_palindrome?(str)
+  str = str.downcase.delete('^a-z0-9') # deletes anything that isn't a letter or digit.
+  palindrome?(str)
 end
 
 p real_palindrome?('madam') == true
