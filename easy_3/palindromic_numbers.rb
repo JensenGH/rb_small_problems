@@ -41,3 +41,11 @@ p palindromic_number?(34543) == true
 p palindromic_number?(123210) == false
 p palindromic_number?(22) == true
 p palindromic_number?(5) == true
+
+
+# Further exploration:
+# If a single digit from 0..7 has a leading zero, Ruby will return that integer.
+# Single digits from 8..9 with leading zeros throw an exception 'invalid octal digit'
+# I also noticed 010 => 8, 011 => 9, and 012 => 10
+# It seems best to avoid using leading zeros and stick with strings since they don't natrually
+# convert properly.
