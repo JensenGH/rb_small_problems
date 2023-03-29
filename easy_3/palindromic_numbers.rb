@@ -22,16 +22,18 @@ Data structure:
 
 Algo:
 - Create a method called 'palindromic_number?'
-- This method takes an integer as an argument.
-- Convert the input to a string and check to see if it is equal to itself reversed after converting
-from integer to string
+- This method takes an integer or integers as an argument.
+- Convert the integers into a string of integers, and check if it's equal to itself reversed.
+
+Integer#digits returns the original integers as an array of digits in reverse order
+Array#join returns a string by converting each element into a string
 
 =end
 
 # Code
 
 def palindromic_number?(num)
-  num.to_s == num.to_s.reverse
+  num.to_s == num.digits.join
 end
 
 
