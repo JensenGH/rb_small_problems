@@ -28,20 +28,14 @@ Data structure:
 Algo:
 - Create a method named 'xor?'
 - This method takes two arguments (e.g. 5.even?, 4.even?)
-- If one of the arguments is truthy, return true, false otherwise.
+- If exactly one of its arguments is truthy, return true, false otherwise.
 
 =end
 
 # Code
 
-def xor?(num1, num2)
-  if num1 == false && num2 == true
-    return true
-  elsif num1 == true && num2 == false
-    return true
-  else
-    return false
-  end
+def xor?(value1, value2)
+  true ? (!value1 && !!value2) || (!value2 && !!value1) : false
 end
 
 p xor?(5.even?, 4.even?) == true
