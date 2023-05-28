@@ -48,10 +48,19 @@ end
 # is a palindrome. You may not use an if, unless, or case statement or modifier.
 
 def palindromic?(collection)
-  true ? (collection == collection.reverse) : false
+  reversed_collection = []
+  counter = collection.size
+  collection.class == String ? collection = collection.chars : collection
+  until counter == 0
+    reversed_collection << collection[counter -1]
+    counter -= 1
+  end
+  collection == reversed_collection
 end
 
+p palindromic?([1, 2, 3, 2, 1]) == true
+p palindromic?("madam") == true
 p palindromic?("Madam") == false
-p palindromic?("12321") == true
+p palindromic?(["hello", nil, 1, nil, "hello"]) == true
+p palindromic?([3, 2, 1, 5]) == false
 p palindromic?([true, false, 'hello', false, true]) == true
-p palindromic?([true, nil, false, false, true]) == false
