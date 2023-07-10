@@ -18,7 +18,7 @@ short_long_short('', 'xyz') == "xyz"
 
 1. What happens when we pass an empty string as an argument?
 - Our last test case shows when we concatenate an empty string to a non-empty string, the
-empty string
+result is the non-empty string.
 
 2. Can I assume that all inputs are strings?
   - The test cases do not show any non-string inputs.
